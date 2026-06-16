@@ -1,16 +1,24 @@
 import com.geometry.shapes.Circle;
 import com.geometry.shapes.Rectangle;
+import com.geometry.shapes.Shape;
 import com.geometry.shapes.Triangle;
+import com.geometry.utils.GeometryUtils;
 
 public class Main {
     public static void main(String[] args) {
         Circle circle = new Circle(5);
         Rectangle rectangle = new Rectangle(4, 6);
         Triangle triangle = new Triangle(3, 5, 6);
+        GeometryUtils utils = new GeometryUtils();
 
         System.out.printf("Круг: площадь = %.2f, периметр = %.2f%n", circle.getArea(), circle.getPerimeter());
         System.out.printf("Прямоугольник: площадь = %.2f, периметр = %.2f%n", rectangle.getArea(), rectangle.getPerimeter());
         System.out.printf("Треугольник: площадь = %.2f, периметр = %.2f%n", triangle.getArea(), triangle.getPerimeter());
         System.out.printf("Диаметр круга = %.2f%n", circle.getDiameter());
+
+        System.out.printf("Площадь круга в сантиметрах = %.2f%n", utils.metersToCentimeters(circle.getArea()));
+        System.out.printf("Периметр прямоугольника в метрах = %.2f%n", utils.centimetersToMeters(rectangle.getPerimeter()));
+        Shape shapeWithLargerArea = utils.getLargerArea(circle, rectangle);
+        System.out.printf("Определение большей площади фигуры: %.2f%n", shapeWithLargerArea.getArea());
     }
 }
