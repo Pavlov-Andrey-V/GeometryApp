@@ -11,5 +11,6 @@ public class Main {
         System.out.printf("Круг: площадь = %.2f, периметр = %.2f%n", circle.getArea(), circle.getPerimeter());
         System.out.printf("Прямоугольник: площадь = %.2f, периметр = %.2f%n", rectangle.getArea(), rectangle.getPerimeter());
         System.out.printf("Треугольник: площадь = %.2f, периметр = %.2f%n", triangle.getArea(), triangle.getPerimeter());
+        System.out.printf("Диаметр круга = %.2f%n", circle.getDiameter());
     }
 }
