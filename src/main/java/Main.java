@@ -2,6 +2,8 @@ import com.geometry.shapes.Circle;
 import com.geometry.shapes.Rectangle;
 import com.geometry.shapes.Shape;
 import com.geometry.shapes.Triangle;
+import com.geometry.three_dimensional_shapes.Cube;
+import com.geometry.three_dimensional_shapes.Sphere;
 import com.geometry.utils.GeometryUtils;
 
 import java.util.ArrayList;
@@ -15,6 +17,8 @@ public class Main {
         Rectangle rectangle = new Rectangle(4, 6);
         Triangle triangle = new Triangle(3, 5, 6);
         GeometryUtils utils = new GeometryUtils();
+        Cube cube = new Cube(7);
+        Sphere sphere = new Sphere(8);
 
         Collections.addAll(shapes, circle, rectangle, triangle);
 
@@ -29,5 +33,8 @@ public class Main {
         System.out.printf("Определение большей площади фигуры: %.2f%n", shapeWithLargerArea.getArea());
 
         System.out.printf("Общая площадь фигур: %.2f%n", utils.getTotalArea(shapes));
+
+        System.out.printf("Куб: объем = %.2f, площадь поверхности = %.2f%n", cube.getVolume(), cube.getSurfaceArea());
+        System.out.printf("Сфера: объем = %.2f, площадь поверхности = %.2f%n", sphere.getVolume(), sphere.getSurfaceArea());
     }
 }

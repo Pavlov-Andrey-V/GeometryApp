@@ -26,6 +26,12 @@
             <artifactId>geometry-utils</artifactId>
             <version>1.1.0-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.geometry</groupId>
+            <artifactId>three-dimensional-shapes</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
