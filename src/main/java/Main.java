@@ -38,5 +38,6 @@ public class Main {
         System.out.printf("Сфера: объем = %.2f, площадь поверхности = %.2f%n", sphere.getVolume(), sphere.getSurfaceArea());
 
         System.out.printf("Площадь поперечного сечения сферы = %.2f%n", sphere.getCrossSectionArea());
+        System.out.println("Комментарий для создания PR");
     }
 }
