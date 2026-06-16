@@ -4,12 +4,19 @@ import com.geometry.shapes.Shape;
 import com.geometry.shapes.Triangle;
 import com.geometry.utils.GeometryUtils;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
+        List<Shape> shapes = new ArrayList<>();
         Circle circle = new Circle(5);
         Rectangle rectangle = new Rectangle(4, 6);
         Triangle triangle = new Triangle(3, 5, 6);
         GeometryUtils utils = new GeometryUtils();
+
+        Collections.addAll(shapes, circle, rectangle, triangle);
 
         System.out.printf("Круг: площадь = %.2f, периметр = %.2f%n", circle.getArea(), circle.getPerimeter());
         System.out.printf("Прямоугольник: площадь = %.2f, периметр = %.2f%n", rectangle.getArea(), rectangle.getPerimeter());
@@ -20,5 +27,7 @@ public class Main {
         System.out.printf("Периметр прямоугольника в метрах = %.2f%n", utils.centimetersToMeters(rectangle.getPerimeter()));
         Shape shapeWithLargerArea = utils.getLargerArea(circle, rectangle);
         System.out.printf("Определение большей площади фигуры: %.2f%n", shapeWithLargerArea.getArea());
+
+        System.out.printf("Общая площадь фигур: %.2f%n", utils.getTotalArea(shapes));
     }
 }
